@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf8">
+    <title>Ejercicio 6.1 - Almacén</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <meta name="description" content="Ejercicio de Javascript">
+    <meta name="author" content="Juan Segura">
+    <meta name="keywords" content="JavaScript, Ejercicio, HTML5, DAW">
+</head>
+
+<body>
+    <div id="app" class="container">
+
+        <header>
+            <h1>Almacén central con Vue - ACME SL</h1>
+        </header>
+
+        <!-- Acciones sobre el almacén -->
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <product-form></product-form>
+            </div>
+        </div>
+
+        <!-- Almacén de productos -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <product-table></product-table>
+            </div>
+        </div>
+
+        <!-- Listados del almacén -->
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <form>
+                    <fieldset>
+                        <legend>Listado de productos</legend>
+                        <!-- Aquí los inputs y botones del form -->
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="opt-list" value="alf" required="">Listado alfabético
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="opt-list" value="uds">Listado por
+                                unidades (desc)
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-primary">Mostrar</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <form>
+                    <fieldset>
+                        <legend>Productos bajo stock</legend>
+                        <!-- Aquí los inputs y botones del form -->
+                        <div class="form-group">
+                            <label for="low-uds">Nº mín. de uds.:</label>
+                            <input type="text" class="form-control" required="">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="opt-low" value="alf" required="">Listado
+                                alfabético
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="opt-low" value="uds">Listado por
+                                unidades
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-primary">Mostrar</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <p></p>
+                    <ul></ul>
+                </div>
+            </div>
+
+        </div>
+            <footer><small>Diseño Web en Entorno Cliente - Juan Segura</small></footer>
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <script src="./model/product.class.js"></script>
+            <script src="./model/store.class.js"></script>
+            <script src="./vue.js"></script>
+</body>
+
+</html>

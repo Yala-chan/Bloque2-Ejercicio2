@@ -1,0 +1,18 @@
+.hidden {
+    display: none;
+}
+
+.material-icons {
+	cursor: pointer;
+}
+
+.disabled {
+	cursor: not-allowed;
+}
+
+form {
+	padding: 10px;
+	border: 1px solid black;
+}
+
+
